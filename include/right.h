@@ -3,17 +3,17 @@
  * Richard Fernando Heise Ferreira GRR20101053
  * Carlos Iago Bueno GRR20190171
  */
-#ifndef DIREITA_H
-#define DIREITA_H
+#ifndef RIGHT_H
+#define RIGHT_H
 
-#include "uteis.h"
+#include "utils.h"
 
 /**
  * Quantas jogadas sao necessarias para se fazer gol na direita
  * Recebe um campo, o tamanho do campo e a posicao da bola
  * Retorna o numero de jogadas necessarias para vencer.
  */
-int heuristicaDireita(char *p_campo, int tam, int pos_bola);
+int right_heuristic(char *p_field, int size, int ball_pos);
 
 /**
  * Testa a heuristicaEsquerda colocando filosofos na esquerda da bola
@@ -21,7 +21,7 @@ int heuristicaDireita(char *p_campo, int tam, int pos_bola);
  * Retorna a heuristica para todas as jogadas possiveis de filosofos
  * na esquerda do campo.
  */
-int testaFilosofosDireita(jogo_t *jogo, char *campo_tmp);
+int test_philosophers_right(game_t *game, char *temp_field);
 
 /**
  * Testa a heuristicaEsquerda chutes para a direita
@@ -29,13 +29,13 @@ int testaFilosofosDireita(jogo_t *jogo, char *campo_tmp);
  * Retorna a heuristica para todas as jogadas possiveis de chutes
  * para a direita do campo.
  */
-int testaChuteDireita(jogo_t *jogo, char *campo);
+int test_kick_right(game_t *game, char *field);
 
 /**
  * Busca a jogada que da menos chance do jogador da esquerda perder o jogo
  * Recebe um ponteiro jogo
  * Retorna uma string com a melhor jogada.
  */
-char* buscaMelhorJogadaDireita(jogo_t *jogo);
+char* search_best_play_right(game_t *game);
 
 #endif

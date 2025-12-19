@@ -3,13 +3,13 @@
  * Richard Fernando Heise Ferreira GRR20101053
  * Carlos Iago Bueno GRR20190171
  */
-#ifndef MARIA_H
-#define MARIA_H
+#ifndef MAR_IA_LIB_H
+#define MAR_IA_LIB_H
 
-#include "direita.h"
-#include "esquerda.h"
+#include "right.h"
+#include "left.h"
 
 // Função que resolve o jogo, retorna uma string com a melhor jogada
-char* resolve(char* buffer);
+char* solve(char* buffer);
 
 #endif
